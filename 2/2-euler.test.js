@@ -1,4 +1,4 @@
-const { getFibNums, sumEvenNums, ans } = require("./2-euler-r");
+const { getFibNums, sumEvenNums, ans } = require("./2-euler");
 
 describe("Even fibonacci nums", () => {
   test("Should get correct fib numbers", () => {

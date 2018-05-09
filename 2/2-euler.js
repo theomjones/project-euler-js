@@ -2,16 +2,18 @@
 // 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 // By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-/**
- * Gets fibonacci numbers to a within a specified range.
- */
-
 exports.getFibNums = getFibNums;
 exports.sumEvenNums = sumEvenNums;
 exports.ans = () => {
   return sumEvenNums(getFibNums(1, 2, Math.pow(10, 6) * 4));
 };
 
+/**
+ * Gets fibonacci numbers when given first 2 in sequence, and a maximum number value.
+ * @param {Number} first The first number of sequence
+ * @param {Number} second The second number of sequence
+ * @param {Number} to The value that fibonacci numbers cannot exceed
+ */
 function getFibNums(first, second, to) {
   let fib1 = first;
   let fib2 = second;
@@ -34,6 +36,10 @@ function getFibNums(first, second, to) {
   return nums;
 }
 
+/**
+ * Sums even numbers of an array
+ * @param {Array} arr
+ */
 function sumEvenNums(arr) {
   let sum = 0;
   arr.forEach(num => {

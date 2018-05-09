@@ -7,6 +7,11 @@
     "jest": "^22.4.3"
   },
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "coverageReporters": ["json-summary"]
   }
 }
